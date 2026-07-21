@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const pageName = path.substring(path.lastIndexOf('/') + 1);
     highlightActiveNavItem(pageName);
+
+    // 3. Header Scroll Shrink Logic
+    initHeaderScroll();
 });
 
 /* ========== THEME MANAGEMENT ========== */
@@ -61,4 +64,22 @@ function highlightActiveNavItem(pageName) {
             link.classList.remove('active');
         }
     });
+}
+
+function initHeaderScroll() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    const handleScroll = () => {
+        // Threshold is 60% of viewport height
+        const threshold = window.innerHeight * 0.6;
+        if (window.scrollY >= threshold) {
+            header.classList.add('shrunk');
+        } else {
+            header.classList.remove('shrunk');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 }
