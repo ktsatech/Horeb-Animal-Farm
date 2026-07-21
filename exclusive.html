@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Horeb Animal Farm's exclusive agricultural products, organic manure, absorbent animal litter, and custom training consultations in Bushenyi, Uganda.">
+    <title>Exclusive Products & Services | Horeb Animal Farm</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/exclusive.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>🌾 Horeb Animal Farm</h1>
+                    <p>Nyakabirizi, Bushenyi • Uganda</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="exclusive.html" class="active">Exclusive Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Exclusive Hero Section -->
+        <section class="exclusive-hero">
+            <div class="container">
+                <span class="section-tag">Elite Agriculture</span>
+                <h1>Organic Solutions & <span class="hero-highlight">Expert Training</span></h1>
+                <p>Advance your agricultural yields with our high-potency organic fertilizers, dust-free absorption litter, and professional training consultation schedules.</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Products</span>
+                    <h2>Premium Farm Products & Services</h2>
+                    <p>Select any exclusive offering below to pre-populate our contact and booking forms instantly using AJAX memory storage!</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Manure -->
+                    <div class="service-card" id="manure-card">
+                        <div>
+                            <div class="service-icon"><i class="fas fa-seedling"></i></div>
+                            <h3>Bio-Organic Compost Manure</h3>
+                            <p>Rich, composted organic fertilizer collected from our rabbit chambers and layered poultry farms. High in nitrogen and organic matter, perfect for local banana plantations and vegetable fields.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Fully composted and weed-free</li>
+                                <li><i class="fas fa-check-circle"></i> Enhances long-term soil structure</li>
+                                <li><i class="fas fa-check-circle"></i> 100% safe for organic farming</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="service-price">
+                                <span class="price-tag">Custom Wholesale Rates</span>
+                            </div>
+                            <button onclick="localStorage.setItem('selectedFarm', 'manure'); window.location.href='contact.html';" class="service-btn">Inquire / Book Order →</button>
+                        </div>
+                    </div>
+
+                    <!-- Absorbent Litter -->
+                    <div class="service-card" id="litter-card">
+                        <div>
+                            <div class="service-icon"><i class="fas fa-sparkles"></i></div>
+                            <h3>Absorbent Animal Litter</h3>
+                            <p>Premium, fully dried and dust-extracted wood-shavings specifically processed for animal bedding. Superior moisture absorption keeps rabbit cages, brooders, and pig pens clean and odor-free.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> 100% natural, soft, non-abrasive</li>
+                                <li><i class="fas fa-check-circle"></i> Minimizes respiratory and paw infections</li>
+                                <li><i class="fas fa-check-circle"></i> Convenient, compact sack packages</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="service-price">
+                                <span class="price-tag">UGX 15,000 / Large Sack</span>
+                            </div>
+                            <button onclick="localStorage.setItem('selectedFarm', 'litter'); window.location.href='contact.html';" class="service-btn">Inquire / Book Order →</button>
+                        </div>
+                    </div>
+
+                    <!-- Genetics Selection -->
+                    <div class="service-card" id="genetics-card">
+                        <div>
+                            <div class="service-icon"><i class="fas fa-dna"></i></div>
+                            <h3>Live Breeding Stock Selection</h3>
+                            <p>Secure certified pure Flemish Giant breeding pairs, point-of-lay pullets, and premium Large White piglets. Accompanied by lineage records, vaccination logs, and direct farmer support.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Full history pedigree records</li>
+                                <li><i class="fas fa-check-circle"></i> Completed clinical immunization logs</li>
+                                <li><i class="fas fa-check-circle"></i> Free 30-day post-settlement advisory</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="service-price">
+                                <span class="price-tag">Contact for Pedigree Logs</span>
+                            </div>
+                            <button onclick="localStorage.setItem('selectedFarm', 'rabbit'); window.location.href='contact.html';" class="service-btn">Inquire / Book Order →</button>
+                        </div>
+                    </div>
+
+                    <!-- Farmer Training -->
+                    <div class="service-card" id="consultation-card">
+                        <div>
+                            <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Professional Farmer Consultations</h3>
+                            <p>Direct mentoring sessions, tailored feeding formulas, cage layout designs, and clinical veterinary diagnostics led by Pr. Peter Musoke and Dr. Ebenezar Mukwano in Bushenyi.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Hands-on housing construction templates</li>
+                                <li><i class="fas fa-check-circle"></i> Complete clinical vaccine calendars</li>
+                                <li><i class="fas fa-check-circle"></i> Cost-saving local organic feed ratios</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="service-price">
+                                <span class="price-tag">Booking Required</span>
+                            </div>
+                            <button onclick="localStorage.setItem('selectedFarm', 'veterinary_Team'); window.location.href='contact.html';" class="service-btn">Book Consultation Session →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>🌾 Horeb Animal Farm</h2>
+                    <p>Decades of farming with heart. Delivering elite genetics, premium compost feeds, organic manure, and practical farmer advisory to advance Ugandan agribusiness.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="gallery.html">Livestock Gallery</a></li>
+                        <li><a href="about.html">Our Legacy Story</a></li>
+                        <li><a href="exclusive.html">Manure & Services</a></li>
+                        <li><a href="contact.html">Contact & Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+256760478737">+256 760 478 737</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="tel:+256757959467">+256 757 959 467</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:horebanimalfarm@gmail.com">horebanimalfarm@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 400m Off Mbarara-Kasese Road, Nyakabirizi, Bushenyi District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Horeb Animal Farm — Nyakabirizi, Bushenyi. Elevating Agricultural and Breeding Knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Javascript Logic -->
+    <script src="/global.js"></script>
+    <script src="/exclusive.js"></script>
+</body>
+</html>

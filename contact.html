@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Horeb Animal Farm in Nyakabirizi, Bushenyi. Book a professional tour, request organic manure, or contact Pr. Peter Musoke.">
+    <title>Contact & Bookings | Horeb Animal Farm</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/contact.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>🌾 Horeb Animal Farm</h1>
+                    <p>Nyakabirizi, Bushenyi • Uganda</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="exclusive.html">Exclusive Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <span class="section-tag">Get In Touch</span>
+                <h1>Connect With Our <span class="hero-highlight">Farm Office</span></h1>
+                <p>Have questions about Flemish Giant stock availability, compost manure orders, or booking an on-site clinical consultation? Reach out today!</p>
+            </div>
+        </section>
+
+        <!-- Two-Column Form & Map -->
+        <section style="padding: 4rem 0;">
+            <div class="container contact-two-columns">
+                <!-- Column 1: AJAX Contact Form with Tabs -->
+                <div class="contact-form-wrapper">
+                    <!-- Tab Buttons -->
+                    <div class="contact-tabs" style="display: flex; gap: 0.5rem; margin-bottom: 2.2rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+                        <button type="button" class="tab-btn active" id="tabGeneral" style="flex: 1; padding: 12px 6px; border: none; background: none; font-weight: 700; color: var(--accent); cursor: pointer; border-bottom: 3px solid var(--accent); font-size: 0.95rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s ease;">
+                            <i class="fas fa-envelope"></i> General Inquiry
+                        </button>
+                        <button type="button" class="tab-btn" id="tabVet" style="flex: 1; padding: 12px 6px; border: none; background: none; font-weight: 700; color: var(--text-secondary); cursor: pointer; font-size: 0.95rem; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s ease;">
+                            <i class="fas fa-stethoscope"></i> Consult Dr. Ebenezar
+                        </button>
+                    </div>
+
+                    <!-- TAB 1: General inquiry Form -->
+                    <div class="tab-content active" id="contentGeneral">
+                        <div class="form-header">
+                            <h2>Inquiry & Booking Form</h2>
+                            <p>For livestock purchase, manure orders, and visiting bookings.</p>
+                        </div>
+                        <form id="contactForm" action="https://formsubmit.co/ajax/horebanimalfarm@gmail.com" method="POST" class="contact-form">
+                            <!-- Avoid FormSubmit captcha page -->
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Kutesa" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="kutesa@gmail.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone"><i class="fas fa-phone"></i> Telephone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+256 700 000000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject"><i class="fas fa-tag"></i> Inquiry Subject</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a category</option>
+                                        <option value="Livestock Purchase">Livestock Purchase (Rabbits / Pigs / Hens)</option>
+                                        <option value="Product Order">Product Order (Manure / Bedding Shavings)</option>
+                                        <option value="Exclusive Training">Exclusive Training & Vet Advice</option>
+                                        <option value="General Question">General Farmer Question</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="message"><i class="fas fa-comment-dots"></i> Detailed Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Specify breed counts, delivery dates or clinical consultation requests..." required></textarea>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Secure Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- TAB 2: Veterinary Specialist Form -->
+                    <div class="tab-content" id="contentVet" style="display: none;">
+                        <div class="form-header">
+                            <h2>Specialized Clinical Consultation</h2>
+                            <p>Direct channel to Dr. Ebenezar Mukwano. Get diagnostics, vaccines, and AI advice.</p>
+                            <div style="background: var(--bg-secondary); padding: 0.8rem 1.2rem; border-radius: 12px; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; border-left: 3px solid var(--accent);">
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Direct Doctor Contact:</span>
+                                <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);"><i class="fas fa-phone-alt"></i> 0747435278</span>
+                                <span style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);"><i class="fas fa-envelope"></i> ebenezarmukwano@gmail.com</span>
+                            </div>
+                        </div>
+                        <form id="vetForm" action="https://formsubmit.co/ajax/ebenezarmukwano@gmail.com" method="POST" class="contact-form">
+                            <!-- Avoid FormSubmit captcha page -->
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vetName"><i class="fas fa-user"></i> Your Name</label>
+                                    <input type="text" id="vetName" name="name" placeholder="Kutesa" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vetLocation"><i class="fas fa-map-marker-alt"></i> Location (Town/District)</label>
+                                    <input type="text" id="vetLocation" name="location" placeholder="e.g. Bushenyi Town, Sheema, Mbarara" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vetPhone"><i class="fas fa-phone"></i> Telephone / WhatsApp</label>
+                                    <input type="tel" id="vetPhone" name="phone" placeholder="e.g. 0770000000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vetEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                                    <input type="email" id="vetEmail" name="email" placeholder="kutesa@gmail.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="vetAnimals"><i class="fas fa-paw"></i> Farm Animals (Types & Breed counts)</label>
+                                <input type="text" id="vetAnimals" name="farm_animals" placeholder="e.g. 15 Flemish Giant Rabbits, 200 ISA Brown Layers" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="vetReason"><i class="fas fa-comment-medical"></i> Specific Reason for Consulting</label>
+                                <textarea id="vetReason" name="reason_for_consulting" rows="4" placeholder="Describe symptoms, vaccination planning, artificial insemination schedules, or design guidance you need..." required></textarea>
+                            </div>
+
+                            <button type="submit" id="submitVetBtn" class="submit-btn">
+                                <i class="fas fa-stethoscope"></i> Submit Consultation Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Column 2: Map & Location Details -->
+                <div class="map-wrapper">
+                    <div class="map-header">
+                        <h2>Our Coordinates</h2>
+                        <p>Located in the heart of Nyakabirizi, Bushenyi District, Western Uganda.</p>
+                    </div>
+
+                    <!-- OpenStreetMap Iframe (Premium, Clean) -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.514457630737!2d30.2001552!3d-0.5421098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d919799bbd6a2f%3A0xea214d026bd6cae9!2sNyakabirizi%2C%20Bushenyi!5e0!3m2!1sen!2sug!4v1700000000000!5m2!1sen!2sug" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="location-details">
+                        <div class="location-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <strong>Physical Address</strong>
+                                <p>Nyakabirizi, Bushenyi District (Just 400 meters Off Mbarara-Kasese Road, Bushenyi, Uganda).</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Visitor Hours</strong>
+                                <p>Monday — Saturday: 8:00 AM to 5:00 PM<br>Sunday: By Special Appointment Only</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>Instant Mobile Launchers</strong>
+                                <p>Need immediate answers? Open a secure chat directly with our WhatsApp assistant:</p>
+                                <button id="whatsappButton" class="btn-primary" style="margin-top: 10px; background: #25d366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
+                                    <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ System Section -->
+        <section style="padding: 4rem 0; background: var(--bg-secondary); border-top: 1px solid var(--border-light);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Help Desk</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Read quick, authoritative answers compiled by Pr. Peter Musoke on ordering, transport, and farm consults.</p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item" style="background: var(--card-bg); border-radius: 18px; border: 1px solid var(--border-light); overflow: hidden;">
+                        <div class="faq-question" style="padding: 1.5rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Can we get genetics delivered to other districts like Mbarara, Kampala, or Fort Portal?</span>
+                            <i class="fas fa-chevron-down" style="color: var(--accent); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); display: none; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+                            <p>Yes, absolutely! We coordinate certified, fully ventilated animal transit crates to safe collection points in Kampala, Mbarara, Fort Portal, and other districts across Uganda. Booking deposit confirmations are required to secure transport schedules.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item" style="background: var(--card-bg); border-radius: 18px; border: 1px solid var(--border-light); overflow: hidden;">
+                        <div class="faq-question" style="padding: 1.5rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Are Flemish Giant Rabbits easy to maintain in Uganda's climate?</span>
+                            <i class="fas fa-chevron-down" style="color: var(--accent); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); display: none; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+                            <p>Flemish Giants thrive wonderfully when raised in well-ventilated, spacious timber cages sheltered from direct equatorial rain and sun. Our consultation package includes full framing designs and immunization calendars to prevent coccidiosis and other local rabbit ailments.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item" style="background: var(--card-bg); border-radius: 18px; border: 1px solid var(--border-light); overflow: hidden;">
+                        <div class="faq-question" style="padding: 1.5rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <span>How do we purchase organic compost manure in wholesale volumes?</span>
+                            <i class="fas fa-chevron-down" style="color: var(--accent); transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); display: none; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+                            <p>Wholesale compost manure requests can be pre-ordered directly via our contact form. We pack in robust mesh sacks or coordinate small transport trucks (canter/fuso) for direct deliveries to coffee, banana, or tea fields surrounding Bushenyi and Sheema districts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>🌾 Horeb Animal Farm</h2>
+                    <p>Decades of farming with heart. Delivering elite genetics, premium compost feeds, organic manure, and practical farmer advisory to advance Ugandan agribusiness.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="gallery.html">Livestock Gallery</a></li>
+                        <li><a href="about.html">Our Legacy Story</a></li>
+                        <li><a href="exclusive.html">Manure & Services</a></li>
+                        <li><a href="contact.html">Contact & Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+256760478737">+256 760 478 737</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="tel:+256757959467">+256 757 959 467</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:horebanimalfarm@gmail.com">horebanimalfarm@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 400m Off Mbarara-Kasese Road, Nyakabirizi, Bushenyi District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Horeb Animal Farm — Nyakabirizi, Bushenyi. Elevating Agricultural and Breeding Knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Javascript Logic -->
+    <script src="/global.js"></script>
+    <script src="/contact.js"></script>
+</body>
+</html>

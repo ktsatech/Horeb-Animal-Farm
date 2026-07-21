@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Horeb Animal Farm - Premium livestock, ethical breeding, giant rabbits, layer hens, and Large White pigs in Nyakabirizi, Bushenyi, Uganda.">
+    <title>Horeb Animal Farm | Nyakabirizi, Bushenyi</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>🌾 Horeb Animal Farm</h1>
+                    <p>Nyakabirizi, Bushenyi • Uganda</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="exclusive.html">Exclusive Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Pure Heritage from <span class="hero-highlight">Nyakabirizi</span> — Horeb Animal Farm</h1>
+                    <p>Western Uganda's premier model farm specializing in Flemish Giant rabbits, high-yielding layer hens, and Large White pigs. Championing agricultural excellence, bio-safety, and sustainable feed practices.</p>
+                    <a href="contact.html" class="btn-primary"><i class="fas fa-cow"></i> Plan Your Farm Visit →</a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>300+</h3>
+                            <span>Active Animals</span>
+                        </div>
+                        <div class="stat">
+                            <h3>18+</h3>
+                            <span>Years Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <h3>70%</h3>
+                            <span>Improved Genetics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-banner">
+                    <h2>HEALTHY & CLEAN ANIMALS</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Specialized Farms Sections -->
+        <section style="padding: 5rem 0 3rem;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Departments</span>
+                    <h2>Our Specialized Farms</h2>
+                    <p>Click any card to explore our biological departments — our contact forms will auto-fill your chosen interests!</p>
+                </div>
+
+                <div class="farm-cards-grid">
+                    <!-- Flemish Giants -->
+                    <div class="farm-card" data-farm="rabbit">
+                        <div class="farm-card-content">
+                            <h3>Flemish Giant Rabbits</h3>
+                            <p>The largest rabbit breed globally. Calm, robust, and optimized for breeding stock establishment.</p>
+                            <span class="exclusive-badge">Explore Selection →</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer birds -->
+                    <div class="farm-card" data-farm="poultry">
+                        <div class="farm-card-content">
+                            <h3>ISA Brown Layers</h3>
+                            <p>High-producing layer birds providing fresh daily harvests of thick-shelled organic eggs.</p>
+                            <span class="exclusive-badge">Explore Poultry →</span>
+                        </div>
+                    </div>
+
+                    <!-- Large White Pigs -->
+                    <div class="farm-card" data-farm="pig">
+                        <div class="farm-card-content">
+                            <h3>Large White Pigs</h3>
+                            <p>Fast-growing maternal lines bred for superior fertility, robust feed efficiency, and premium meat.</p>
+                            <span class="exclusive-badge">Explore Breeding →</span>
+                        </div>
+                    </div>
+
+                    <!-- Veterinary team -->
+                    <div class="farm-card" data-farm="veterinary_Team">
+                        <div class="farm-card-content">
+                            <h3>Meet the Vet Team</h3>
+                            <p>Resident clinical vet care, immunizations, and AI breeding support led by Dr. Ebenezar Mukwano.</p>
+                            <span class="exclusive-badge">Get Assistance →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Highlight Carousel -->
+        <section class="carousel-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Visual Highlights</span>
+                    <h2>Horeb Farm Highlights</h2>
+                    <p>Browse through actual photos of our breeding chambers, healthy giant bucks, gilts, and layer cages in Western Uganda.</p>
+                </div>
+
+                <div class="carousel-3d">
+                    <div id="carouselContainer">
+                        <!-- Cards are dynamically rendered via AJAX / JS rotation -->
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn" id="nextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>🌾 Horeb Animal Farm</h2>
+                    <p>Decades of farming with heart. Delivering elite genetics, premium compost feeds, organic manure, and practical farmer advisory to advance Ugandan agribusiness.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="gallery.html">Livestock Gallery</a></li>
+                        <li><a href="about.html">Our Legacy Story</a></li>
+                        <li><a href="exclusive.html">Manure & Services</a></li>
+                        <li><a href="contact.html">Contact & Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+256760478737">+256 760 478 737</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="tel:+256757959467">+256 757 959 467</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:horebanimalfarm@gmail.com">horebanimalfarm@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 400m Off Mbarara-Kasese Road, Nyakabirizi, Bushenyi District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Horeb Animal Farm — Nyakabirizi, Bushenyi. Elevating Agricultural and Breeding Knowledge.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Javascript Logic -->
+    <script src="/global.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

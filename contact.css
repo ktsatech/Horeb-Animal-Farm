@@ -1,0 +1,225 @@
+/* ==========================================================================
+   CONTACT.CSS — CONTACT PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Hero */
+.contact-hero {
+    padding: 5.5rem 0 4.5rem;
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(184, 92, 26, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* Two-column Form & Map */
+.contact-two-columns {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    margin: 4rem 0;
+}
+
+.contact-form-wrapper {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.form-group label i {
+    color: var(--accent);
+    margin-right: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 18px;
+    border: 2px solid var(--border-light);
+    border-radius: 16px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.submit-btn {
+    background: linear-gradient(95deg, var(--accent), #df7c32);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px var(--accent-glow);
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px var(--accent-glow);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Map & Details Card */
+.map-wrapper {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.map-header {
+    padding: 2rem 2.5rem;
+}
+
+.map-header h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+}
+
+.map-header p {
+    color: var(--text-secondary);
+}
+
+.map-container {
+    width: 100%;
+    height: 280px;
+}
+
+.location-details {
+    padding: 2.2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.location-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.location-item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-top: 2px;
+}
+
+.location-item strong {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 3px;
+    color: var(--text-primary);
+}
+
+.location-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* FAQs accordion styling */
+.faq-item {
+    background: var(--card-bg);
+    border-radius: 18px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-secondary);
+    display: none;
+    border-top: 1px solid var(--border-light);
+    padding-top: 1rem;
+}
+
+.faq-item.active .faq-answer {
+    display: block !important;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
