@@ -420,34 +420,4 @@ footer {
     opacity: 0.8;
 }
 
-/* ========== MOBILE RESPONSIVE MEDIA QUERIES (768px) ========== */
-@media screen and (max-width: 768px) {
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
-    /* Navbar Collapse to Flex-column */
-    .navbar {
-        flex-direction: column;
-        gap: 1.2rem;
-        padding: 1.2rem 0;
-    }
-
-    .nav-links {
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-    }
-
-    /* Grids to 1-column */
-    .footer-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
