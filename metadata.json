@@ -1,0 +1,6 @@
+{
+  "name": "Horeb Animal Farm",
+  "description": "A highly professional, outstanding web platform for Horeb Animal Farm in Nyakabirizi, Bushenyi, featuring rabbits, hens, pigs, training, and exclusive agricultural services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
