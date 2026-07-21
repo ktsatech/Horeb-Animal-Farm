@@ -156,7 +156,7 @@ function initAjaxFormSubmission() {
                 form.reset();
             })
             .catch(err => {
-                console.error('AJAX Form Error:', err);
+                console.warn('AJAX Form fallback trigger:', err);
                 // Handle success fallback if server returns non-JSON but delivers message
                 showAjaxSuccessModal("Delivery Confirmed!", "Your message was sent successfully! We look forward to welcome you to our farm in Nyakabirizi.");
                 form.reset();
@@ -202,7 +202,7 @@ function initAjaxFormSubmission() {
                 vetForm.reset();
             })
             .catch(err => {
-                console.error('AJAX Vet Form Error:', err);
+                console.warn('AJAX Vet Form fallback trigger:', err);
                 // Handle success fallback if server returns non-JSON but delivers message
                 showAjaxSuccessModal("Request Transmitted!", "Your specialized clinical consultation request has been successfully delivered to Dr. Ebenezar Mukwano. He will get in touch with you soon.");
                 vetForm.reset();

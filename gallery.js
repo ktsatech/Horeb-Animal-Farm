@@ -25,7 +25,7 @@ function initAjaxGallery() {
             setupGalleryFilters(imagesList);
         })
         .catch(err => {
-            console.error('AJAX Gallery Error:', err);
+            console.warn('AJAX Gallery Warning:', err);
             grid.innerHTML = `<div class="no-results" style="text-align: center; padding: 3rem; color: var(--accent);">⚠️ AJAX Fetch Failure: ${err.message}. Please verify images.json exists.</div>`;
         });
 }
