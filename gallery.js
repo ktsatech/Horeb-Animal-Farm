@@ -2,73 +2,88 @@
    GALLERY.JS — GALLERY PAGE SPECIFIC SCRIPT LOGIC
    ========================================================================== */
 
-import imagesData from './public/images.json';
-
 document.addEventListener('DOMContentLoaded', () => {
     initGallery();
 });
 
+// Primary Home Page Image Dataset
+const DEFAULT_FARM_IMAGES = [
+    {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10",
+        "title": "Layer Birds Production",
+        "description": "Our high-producing point-of-lay hens housed in clean, biosensitive housing systems with optimized organic feed structures.",
+        "category": "layer"
+    },
+    {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10",
+        "title": "ISA Brown Layers",
+        "description": "Elite ISA Brown layers starting their highly productive egg cycles, producing thick-shelled and rich daily egg harvests.",
+        "category": "layer"
+    },
+    {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex7W7bLcMEltODy3FnIwQC30bjAEPMF_E06Umc_gi8Q&s=10",
+        "title": "Flemish Giant Breeder",
+        "description": "Our premier Flemish Giant rabbits showing excellent conformation, massive bodies, and outstanding docility for elite breeding stocks.",
+        "category": "rabbit"
+    },
+    {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP6ybIyTOav295uSvarPBNHKisP2OTdx_VLyU2qI9dA&s=10",
+        "title": "Large White Pigs",
+        "description": "Robust Large White pig lines exhibiting exceptional growth rates, solid maternal properties, and highly balanced feed conversion.",
+        "category": "pig"
+    },
+    {
+        "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+        "title": "Horeb Bio-Secure Grounds",
+        "description": "Clean, hygienic, bio-secure perimeter and lush green pastures at Horeb Animal Farm in Nyakabirizi, Bushenyi.",
+        "category": "farm"
+    },
+    {
+        "url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800",
+        "title": "Nyakabirizi Pastoral Pastures",
+        "description": "Serene pastoral grounds and bio-sensitive environment for optimal growth and health of our breeding stock.",
+        "category": "farm"
+    }
+];
+
 /* ========== GALLERY PAGE INITIALIZER ========== */
-function initGallery() {
+async function initGallery() {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
 
-    // 3D Carousel image URLs provided by user
-    const carouselUrls = [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex7W7bLcMEltODy3FnIwQC30bjAEPMF_E06Umc_gi8Q&s=10",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP6ybIyTOav295uSvarPBNHKisP2OTdx_VLyU2qI9dA&s=10"
-    ];
+    let imagesList = [...DEFAULT_FARM_IMAGES];
 
-    const sortImagesBy3DFirst = (imagesList) => {
-        return [...imagesList].sort((a, b) => {
-            const aIndex = carouselUrls.indexOf(a.url);
-            const bIndex = carouselUrls.indexOf(b.url);
-            if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-            if (aIndex !== -1) return -1;
-            if (bIndex !== -1) return 1;
-            return 0;
-        });
-    };
-
-    let imagesList = (imagesData && imagesData.images && imagesData.images.length > 0) ? imagesData.images : [
-        {
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10",
-            "title": "Layer Birds Production",
-            "description": "Our high-producing point-of-lay hens housed in clean, biosensitive housing systems with optimized organic feed structures.",
-            "category": "layer"
-        },
-        {
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10",
-            "title": "ISA Brown Layers",
-            "description": "Elite ISA Brown layers starting their highly productive egg cycles, producing thick-shelled and rich daily egg harvests.",
-            "category": "layer"
-        },
-        {
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex7W7bLcMEltODy3FnIwQC30bjAEPMF_E06Umc_gi8Q&s=10",
-            "title": "Flemish Giant Breeder",
-            "description": "Our premier Flemish Giant rabbits showing excellent conformation, massive bodies, and outstanding docility for elite breeding stocks.",
-            "category": "rabbit"
-        },
-        {
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP6ybIyTOav295uSvarPBNHKisP2OTdx_VLyU2qI9dA&s=10",
-            "title": "Large White Pigs",
-            "description": "Robust Large White pig lines exhibiting exceptional growth rates, solid maternal properties, and highly balanced feed conversion.",
-            "category": "pig"
+    try {
+        const response = await fetch('/images.json');
+        if (response.ok) {
+            const data = await response.json();
+            if (data && Array.isArray(data.images) && data.images.length > 0) {
+                imagesList = data.images;
+            }
         }
-    ];
+    } catch (e) {
+        console.info("Using embedded default farm images dataset.");
+    }
 
-    const sortedImages = sortImagesBy3DFirst(imagesList);
-    renderGalleryCards(sortedImages);
-    setupGalleryFilters(sortedImages);
+    renderGalleryCards(imagesList);
+    setupGalleryFilters(imagesList);
+}
+
+function getCategoryBadge(category) {
+    switch (category) {
+        case 'rabbit': return '🐇 Rabbit';
+        case 'layer': return '🐔 Layer Hen';
+        case 'pig': return '🐖 Pig';
+        case 'farm': return '🌾 Farm Grounds';
+        default: return '🌿 Livestock';
+    }
 }
 
 function renderGalleryCards(images) {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
 
-    if (images.length === 0) {
+    if (!images || images.length === 0) {
         grid.innerHTML = '<div class="no-results" style="text-align: center; padding: 3rem; color: var(--text-secondary);">No farm pictures found.</div>';
         return;
     }
@@ -81,7 +96,7 @@ function renderGalleryCards(images) {
             <div class="card-info">
                 <h3>${escapeHtml(img.title)}</h3>
                 <p>${escapeHtml(img.description)}</p>
-                <span class="category-badge">${img.category === 'rabbit' ? '🐇 Rabbit' : img.category === 'layer' ? '🐔 Layer Hen' : '🐖 Pig'}</span>
+                <span class="category-badge">${getCategoryBadge(img.category)}</span>
             </div>
         </div>
     `).join('');
@@ -120,3 +135,4 @@ function escapeHtml(str) {
         }
     });
 }
+
