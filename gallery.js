@@ -31,19 +31,8 @@ const DEFAULT_FARM_IMAGES = [
         "title": "Large White Pigs",
         "description": "Robust Large White pig lines exhibiting exceptional growth rates, solid maternal properties, and highly balanced feed conversion.",
         "category": "pig"
-    },
-    {
-        "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
-        "title": "Horeb Bio-Secure Grounds",
-        "description": "Clean, hygienic, bio-secure perimeter and lush green pastures at Horeb Animal Farm in Nyakabirizi, Bushenyi.",
-        "category": "farm"
-    },
-    {
-        "url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800",
-        "title": "Nyakabirizi Pastoral Pastures",
-        "description": "Serene pastoral grounds and bio-sensitive environment for optimal growth and health of our breeding stock.",
-        "category": "farm"
     }
+
 ];
 
 /* ========== GALLERY PAGE INITIALIZER ========== */
