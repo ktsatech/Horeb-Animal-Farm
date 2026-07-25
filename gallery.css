@@ -4,10 +4,26 @@
 
 /* Hero */
 .gallery-hero {
+    width: 100%;
+    max-width: 100%;
     background: var(--gradient-hero);
     padding: 5.5rem 0 3.5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-light);
+}
+
+.gallery-hero h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 850;
+    margin-bottom: 1rem;
+}
+
+.gallery-hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 /* Gallery Container */

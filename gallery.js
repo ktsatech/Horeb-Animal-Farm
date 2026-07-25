@@ -13,7 +13,7 @@ function initGallery() {
     const grid = document.getElementById('galleryGrid');
     if (!grid) return;
 
-    // 3D Carousel image URLs to prioritize at the very beginning of the gallery
+    // 3D Carousel image URLs provided by user
     const carouselUrls = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10",
@@ -32,7 +32,7 @@ function initGallery() {
         });
     };
 
-    let imagesList = (imagesData && imagesData.images) ? imagesData.images : [
+    let imagesList = (imagesData && imagesData.images && imagesData.images.length > 0) ? imagesData.images : [
         {
             "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10",
             "title": "Layer Birds Production",

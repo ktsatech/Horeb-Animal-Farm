@@ -4,11 +4,28 @@
 
 /* Hero */
 .exclusive-hero {
+    width: 100%;
+    max-width: 100%;
     padding: 5.5rem 0 4.5rem;
     background: var(--gradient-hero);
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--border-light);
+    text-align: center;
+}
+
+.exclusive-hero h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 850;
+    margin-bottom: 1rem;
+}
+
+.exclusive-hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .exclusive-hero::before {

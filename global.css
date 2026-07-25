@@ -224,10 +224,27 @@ header {
 }
 
 /* ========== SECTION TITLES (SHARED) ========== */
+header,
+.hero,
+.contact-hero,
+.about-hero,
+.exclusive-hero,
+.gallery-hero,
+.section-header {
+    width: 100%;
+    max-width: 100%;
+}
+
 .section-header {
     text-align: center;
-    max-width: 700px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto 3.5rem;
+}
+
+.section-header p {
+    max-width: 850px;
+    margin: 0.5rem auto 0;
 }
 
 .section-tag {

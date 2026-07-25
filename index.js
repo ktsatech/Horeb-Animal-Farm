@@ -12,12 +12,12 @@ function init3DCarousel() {
     const container = document.getElementById('carouselContainer');
     if (!container) return;
 
-    // Carousel Image Database
+    // Carousel Image Database with exact user-provided image URLs
     const images = [
-        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10", title: "Large White Pigs" },
-        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10", title: "Point of Lay Birds" },
-        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex7W7bLcMEltODy3FnIwQC30bjAEPMF_E06Umc_gi8Q&s=10", title: "Our Layer Harvest" },
-        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP6ybIyTOav295uSvarPBNHKisP2OTdx_VLyU2qI9dA&s=10", title: "Flemish Giant Rabbits" }
+        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl02Ves-ug5hYtplqE50-CEEdOSHjdhWw2Fc6f-EPNA&s=10", title: "Layer Birds Production" },
+        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLaWF2ti3pPJppogbiR0OMD228Gkv5kDCHdMvpPBkUQ&s=10", title: "ISA Brown Layers" },
+        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex7W7bLcMEltODy3FnIwQC30bjAEPMF_E06Umc_gi8Q&s=10", title: "Flemish Giant Breeder" },
+        { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjP6ybIyTOav295uSvarPBNHKisP2OTdx_VLyU2qI9dA&s=10", title: "Large White Pigs" }
     ];
 
     const count = images.length;
