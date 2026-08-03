@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://horebanimalfarm.com/sitemap.xml
+Sitemap: https://horeb-animal-farm.vercel.app/sitemap.xml
